@@ -1,0 +1,105 @@
+/* Minimal, clean news/blog theme */
+/* Typography & color system */
+:root{
+  --bg:#ffffff;
+  --fg:#111111;       /* pure readable dark */
+  --muted:#5f6368;    /* neutral muted */
+  --accent:#c61a09;   /* red accent for CTAs */
+  --soft:#f5f7fa;     /* soft section bg if needed */
+  --card:#ffffff;
+  --border:#e6e8eb;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:#ffffff; /* strict white */
+  color:var(--fg);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:#0b57d0; text-decoration:none}
+a:hover{text-decoration:underline}
+strong{font-weight:800}
+.small{font-size:.92rem}
+.muted{color:var(--muted)}
+
+/* Header */
+header{
+  position:sticky; top:0; z-index:50;
+  background:#ffffff; border-bottom:1px solid var(--border);
+}
+.navbar{
+  max-width:var(--maxw); margin:0 auto; padding:14px 16px;
+  display:flex; align-items:center; gap:16px;
+}
+.logo{font-weight:800; color:var(--fg); letter-spacing:.2px}
+nav{flex:1}
+.navlist{display:flex; gap:10px; overflow:auto; white-space:nowrap; padding:0; margin:0}
+.navlist a{
+  padding:8px 12px; border-radius:8px; color:var(--fg);
+}
+.navlist a:hover{background:#f1f3f4}
+
+/* Search */
+.search-wrap{position:relative; width:340px; max-width:42vw}
+.search-wrap input{
+  width:100%; padding:10px 12px 10px 36px; border-radius:8px; border:1px solid var(--border); background:#fff; color:var(--fg);
+}
+.search-wrap .icon{position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:.55}
+.search-results{
+  position:absolute; top:44px; left:0; right:0; background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,.06); max-height:360px; overflow:auto; display:none; z-index:100;
+}
+.search-results a{display:block; padding:10px 12px; border-bottom:1px solid #f1f3f4; color:var(--fg)}
+.search-results a:last-child{border-bottom:0}
+
+/* Layout */
+.container{max-width:var(--maxw); margin:0 auto; padding:16px}
+.grid{display:grid; grid-template-columns:2fr 1fr; gap:24px; align-items:start}
+@media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+/* Hero */
+.hero{
+  background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px;
+}
+.hero h1{margin:8px 0 10px; font-size:clamp(24px,3.2vw,34px)}
+.hero p{color:var(--muted); margin:0 0 10px}
+.chips{display:flex; gap:8px; flex-wrap:wrap}
+.chip{border:1px solid var(--border); padding:6px 10px; border-radius:999px; background:#fff; color:#444}
+
+/* Cards */
+main .card{
+  background:#fff; border:1px solid var(--border); border-radius:10px; padding:16px;
+}
+.post-list{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
+@media (max-width:720px){.post-list{grid-template-columns:1fr}}
+.post{display:flex; gap:12px}
+.post img{width:136px; height:90px; object-fit:cover; border-radius:8px; border:1px solid var(--border)}
+.post h3{margin:0 0 6px; font-size:1.06rem; line-height:1.35}
+.post .excerpt{color:var(--muted); font-size:.96rem}
+
+/* Sidebar */
+aside .widget{background:#fff; border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:16px}
+.widget h4{margin:0 0 10px}
+.badge{display:inline-block; padding:2px 8px; border:1px solid var(--border); border-radius:999px; font-size:.78rem; color:#555}
+
+/* Converter */
+.converter{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.converter input{padding:8px 10px; border-radius:8px; border:1px solid var(--border); background:#fff; color:var(--fg)}
+.btn{
+  background:#c61a09; color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;
+}
+.btn:hover{filter:brightness(1.05)}
+
+/* Tables */
+table{width:100%; border-collapse:collapse; margin:12px 0}
+td,th{border:1px solid var(--border); padding:8px; text-align:left}
+
+/* Breadcrumbs & footer */
+.breadcrumbs{font-size:.92rem; color:var(--muted); margin-bottom:8px}
+footer{margin-top:30px; border-top:1px solid var(--border); background:#fff}
+footer .inner{max-width:var(--maxw); margin:0 auto; padding:18px 16px; color:var(--muted); font-size:.95rem}

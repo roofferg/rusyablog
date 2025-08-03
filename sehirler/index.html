@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Şehirler | Moskova, St. Petersburg ve Rusya Şehir Rehberleri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moskova, St. Petersburg ve diğer Rusya şehirlerinde yaşam maliyeti, ulaşım, güvenlik ve iş imkanları için rehber.">
+  <link rel="canonical" href="../sehirler/index.html">
+  <meta property="og:title" content="Şehirler">
+  <meta property="og:description" content="Rusya şehir rehberleri: yaşam, kiralar, ulaşım ve güvenlik.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="../sehirler/index.html">
+  <meta property="og:image" content="../assets/img/og-default.jpg">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta name="theme-color" content="#c62828">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <a class="logo" href="../index.html" aria-label="Rusya Blog Ana Sayfa">
+      <span class="dot" aria-hidden="true"></span>
+      Rusya Blog
+    </a>
+    <nav aria-label="Ana menü">
+      <div class="navlist">
+        <a href="../haberler/index.html">Haberler</a>
+        <a href="../teknoloji/index.html">Teknoloji</a>
+        <a href="../hukuk/index.html">Hukuk & Oturum</a>
+        <a href="../egitim/index.html">Eğitim</a>
+        <a href="../sehirler/index.html" aria-current="page">Şehirler</a>
+        <a href="../yasam/index.html">Yaşam</a>
+        <a href="../araba/index.html">Araba</a>
+        <a href="../kategoriler/index.html">Kategoriler</a>
+      </div>
+    </nav>
+    <div class="search-wrap" role="search">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+      <input id="searchInput" type="search" placeholder="Ara: Rusya’da üniversite okumak, yaşam, vize..." aria-label="Site içi arama" autocomplete="off">
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Arama sonuçları"></div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <nav class="breadcrumb" aria-label="Ekmek kırıntısı">
+    <a href="../index.html">Ana sayfa</a> › <span>Şehirler</span>
+  </nav>
+
+  <section class="hero">
+    <span class="kicker">Rehber</span>
+    <h1>Şehirler</h1>
+    <p>Moskova, St. Petersburg ve diğer şehirlerde yaşam maliyeti, kiralar, ulaşım, iş fırsatları ve güvenlik hakkında pratik bilgiler.</p>
+  </section>
+
+  <section class="grid" aria-label="İçerikler">
+    <div>
+      <article class="card">
+        <h2>Öne Çıkan Şehirler</h2>
+        <div class="post-list">
+          <a class="post" href="moskova.html">
+            <img loading="lazy" src="../assets/img/thumb.webp" alt="Moskova şehir rehberi">
+            <div>
+              <h3>Moskova şehir rehberi</h3>
+              <p class="excerpt">Toplu taşıma, yaşam maliyeti, iş olanakları ve konut.</p>
+              <span class="badge">Şehirler</span>
+            </div>
+          </a>
+          <a class="post" href="petersburg.html">
+            <img loading="lazy" src="../assets/img/thumb.webp" alt="St. Petersburg şehir rehberi">
+            <div>
+              <h3>St. Petersburg şehir rehberi</h3>
+              <p class="excerpt">Kültür, kiralar, ulaşım, eğitim ve güvenlik.</p>
+              <span class="badge">Şehirler</span>
+            </div>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <aside aria-label="Yan Panel">
+      <div class="widget">
+        <h4>Hızlı Bağlantılar</h4>
+        <ul class="small">
+          <li><a href="moskova.html">Moskova</a></li>
+          <li><a href="petersburg.html">St. Petersburg</a></li>
+          <li><a href="../yasam/rusyada-yasam-nasil.html">Rusya’da Yaşam</a></li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h4>Ruble ⇆ TL Çevirici</h4>
+        <div class="converter" aria-live="polite">
+          <input id="rubInput" type="number" inputmode="decimal" placeholder="RUB" aria-label="Ruble miktarı">
+          <input id="tryOutput" type="text" placeholder="TL" aria-label="TL karşılığı" readonly>
+          <button class="btn" id="convertBtn" type="button">RUB → TL</button>
+          <span id="rateInfo" class="muted small">Kur yükleniyor…</span>
+        </div>
+        <div class="converter" style="margin-top:8px" aria-live="polite">
+          <input id="tryInput" type="number" inputmode="decimal" placeholder="TL" aria-label="TL miktarı">
+          <input id="rubOutput" type="text" placeholder="RUB" aria-label="Ruble karşılığı" readonly>
+          <button class="btn" id="convertRevBtn" type="button">TL → RUB</button>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="inner small">
+    © 2025 Rusya Blog • <a href="../sitemap.xml">Sitemap</a> • <a href="../robots.txt">Robots</a>
+  </div>
+</footer>
+
+<script>
+/* Lightweight content index for search + latest widgets */
+const CONTENT_INDEX = [
+  {t:"Moskova şehir rehberi",u:"moskova.html",c:"Şehirler",e:"Toplu taşıma, iş fırsatları, güvenlik."},
+  {t:"St. Petersburg şehir rehberi",u:"petersburg.html",c:"Şehirler",e:"Kültür, yaşam maliyeti, kiralar."},
+  {t:"Rusya’da üniversite okumak 2025 Rehberi",u:"../egitim/rusyada-universite-okumak.html",c:"Eğitim",e:"Başvuru, harçlar, İngilizce programlar ve üniversiteler."},
+  {t:"Rusya’da yaşam nasıl? 2025",u:"../yasam/rusyada-yasam-nasil.html",c:"Yaşam",e:"Şehir bazlı yaşam maliyeti ve kiralar."},
+  {t:"VNJ oturma izni: şartlar ve süreç",u:"../hukuk/vnj-oturma-izni.html",c:"Hukuk",e:"Evraklar, kayıt, cezalar ve ipuçları."},
+  {t:"Araba fiyatları ve vergiler",u:"../araba/araba-fiyatlari.html",c:"Araba",e:"Sınıflar, gümrük ve piyasalar."}
+];
+
+const sidebarPopular = document.getElementById('sidebar-popular');
+
+function renderPopular() {
+  if (!sidebarPopular) return;
+  const clicks = JSON.parse(localStorage.getItem('clicks') || '{}');
+  const ranked = CONTENT_INDEX.slice().sort((a,b)=>(clicks[b.u]||0)-(clicks[a.u]||0)).slice(0,6);
+  sidebarPopular.innerHTML = '<ol>'+ranked.map(p=>`<li><a href="${p.u}" data-track="${p.u}">${p.t}</a> <span class="muted">(${clicks[p.u]||0})</span></li>`).join('')+'</ol>';
+}
+
+/* RUB ⇆ TRY converter (same logic as index) */
+const rubInput = document.getElementById('rubInput');
+const tryOutput = document.getElementById('tryOutput');
+const convertBtn = document.getElementById('convertBtn');
+const tryInput = document.getElementById('tryInput');
+const rubOutput = document.getElementById('rubOutput');
+const convertRevBtn = document.getElementById('convertRevBtn');
+const rateInfo = document.getElementById('rateInfo');
+
+let rubToTry = null;
+let usdToRub = null;
+let usdToTry = null;
+
+async function loadRates(){
+  try {
+    const res = await fetch('https://www.cbr-xml-daily.ru/daily_json.js',{cache:'no-store'});
+    const data = await res.json();
+    if (data.Valute?.TRY?.Value) {
+      const rubPerTry = data.Valute.TRY.Value;
+      rubToTry = 1 / rubPerTry;
+    }
+    if (data.Valute?.USD?.Value) {
+      usdToRub = data.Valute.USD.Value;
+    }
+    if (!rubToTry) {
+      try {
+        const fx = await fetch('https://api.exchangerate.host/latest?base=USD&symbols=TRY');
+        const fxj = await fx.json();
+        usdToTry = fxj.rates?.TRY || null;
+      } catch {}
+      if (usdToRub && usdToTry) {
+        const rubToUsd = 1 / usdToRub;
+        rubToTry = rubToUsd * usdToTry;
+      }
+    }
+    if (rubToTry) {
+      rateInfo.textContent = `Kur: 1 RUB ≈ ${(rubToTry).toFixed(4)} TL`;
+      localStorage.setItem('rubToTry', String(rubToTry));
+    } else {
+      rateInfo.textContent = 'Kur bilgisi alınamadı';
+    }
+  } catch {
+    const cached = parseFloat(localStorage.getItem('rubToTry') || '0');
+    if (cached) {
+      rubToTry = cached;
+      rateInfo.textContent = `Kur (önbellek): 1 RUB ≈ ${(rubToTry).toFixed(4)} TL`;
+    } else {
+      rateInfo.textContent = 'Kur bilgisi alınamadı';
+    }
+  }
+}
+
+convertBtn?.addEventListener('click', ()=>{
+  const v = parseFloat(rubInput?.value || '0');
+  if (!rubToTry || !isFinite(v)) { if(tryOutput) tryOutput.value=''; return; }
+  tryOutput.value = (v * rubToTry).toFixed(2);
+});
+
+convertRevBtn?.addEventListener('click', ()=>{
+  const v = parseFloat(tryInput?.value || '0');
+  if (!rubToTry || !isFinite(v)) { if(rubOutput) rubOutput.value=''; return; }
+  rubOutput.value = (v / rubToTry).toFixed(2);
+});
+
+/* init minimal */
+renderPopular?.();
+loadRates();
+</script>
+</body>
+</html>
