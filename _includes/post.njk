@@ -17,7 +17,7 @@
     </header>
     <div class="blog-container">
         <h1>{{ title }}</h1>
-        <p><small>Yayın Tarihi: {{ page.date.toLocaleDateString('tr-TR') }}</small></p>
+        <p><small>Yayın Tarihi: {{ page.date | readableDate }}</small></p>
         {% if thumbnail %}
             <img src="/{{ thumbnail }}" alt="{{ title }}">
         {% endif %}
