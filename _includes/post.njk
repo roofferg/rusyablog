@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; }
+        .blog-container { max-width: 800px; margin: 2rem auto; padding: 2rem; }
+        .blog-container img { max-width: 100%; height: auto; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <header style="text-align:center; padding: 1rem; border-bottom: 1px solid #eee;">
+        <a href="/">Ana Sayfa</a> | <a href="/blog">Tüm Yazılar</a>
+    </header>
+    <div class="blog-container">
+        <h1>{{ title }}</h1>
+        <p><small>Yayın Tarihi: {{ page.date.toLocaleDateString('tr-TR') }}</small></p>
+        {% if thumbnail %}
+            <img src="/{{ thumbnail }}" alt="{{ title }}">
+        {% endif %}
+        <hr>
+        {{ content | safe }}
+    </div>
+</body>
+</html>
